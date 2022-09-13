@@ -1,8 +1,25 @@
 {
     "extends": "@tsconfig/node16/tsconfig.json",
     "compilerOptions": {
-    "outDir": "dist"
+        "outDir": "dist",
+        "lib": ["es2020"],
+        "module": "commonjs",
+        "allowJs": true,
+        "target": "es2019",
+        "sourceMap": true,
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "baseUrl": ".",
+        "skipLibCheck": true,
+        "paths": {
+          "src/*": ["./src/*"],
+          "tests/*": ["./tests/*"]
+        }
     },
     "include": ["src"],
     "exclude": ["node_modules"]
-    }
+  }
