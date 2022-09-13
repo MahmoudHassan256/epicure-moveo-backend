@@ -4,5 +4,6 @@
     "outDir": "dist"
     },
     "include": ["src"],
+    "start": "ts-node src/index.ts",
     "exclude": ["node_modules"]
     }
