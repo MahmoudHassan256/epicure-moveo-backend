@@ -15,7 +15,9 @@ app.get("/", function (req, res) {
 app.use(routes);
 
 connectDb().then(async () => {
-    app.listen(3001, () => console.log("Listening on http://localhost:3001"));
-});
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`Our app is running on port ${ PORT }`);
+    });});
 
 
